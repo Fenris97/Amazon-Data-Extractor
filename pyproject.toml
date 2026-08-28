@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "amazon-data-extractor"
+version = "0.1.0"
+description = "Extract current Amazon product data for ASINs listed in Excel."
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "openpyxl>=3.1,<4",
+]
+
+[project.scripts]
+amazon-data-extractor = "amazon_data_extractor.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
